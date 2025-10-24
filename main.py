@@ -11,3 +11,10 @@ def isOdd(value):
     # 学生实现代码区域
     # 提示：首先检查类型是否为整数，然后检查奇偶性
     
+    # 严格检查类型是否为整数（不接受子类）
+    if type(value) is not int:
+        return False
+    
+    # 使用取模运算判断奇偶性
+    # 注意：负奇数 % 2 在Python中会得到 1
+    return value % 2 == 1
